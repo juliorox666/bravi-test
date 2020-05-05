@@ -1,0 +1,32 @@
+{
+  "people": [
+    {
+      "id": 1,
+      "name": "Fabio",
+      "email": "fabio@gmail.com",
+      "whatsapp": "48 99999-8888",
+      "phone": "48 3022-1010"
+    },
+    {
+      "id": 2,
+      "name": "Carlos",
+      "email": "carlos@gmail.com",
+      "whatsapp": "",
+      "phone": ""
+    },
+    {
+      "id": 3,
+      "name": "Jean",
+      "email": "",
+      "whatsapp": "",
+      "phone": "48 3040-1010"
+    },
+    {
+      "id": 4,
+      "name": "Júlio César Guedes",
+      "email": "julio@gmail.com",
+      "whatsapp": "48 99933-1919",
+      "phone": ""
+    }
+  ]
+}

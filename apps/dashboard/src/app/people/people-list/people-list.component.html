@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> <h1>People</h1> </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item
+        (click)="selected.emit(people)"
+        *ngFor="let people of peoples"
+      >
+        <h3 mat-line>{{ people.name }}</h3>
+        <p mat-line>
+          {{ people.email }} - {{ people.whatsapp }} - {{ people.phone }}
+        </p>
+        <button mat-icon-button (click)="deleted.emit(people)">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

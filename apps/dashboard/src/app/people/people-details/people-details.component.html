@@ -1,0 +1,58 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>
+        <span *ngIf="currentPeople.id; else: elseBlock">{{
+          originalName
+        }}</span>
+        <ng-template #elseBlock>Select a Person</ng-template>
+      </h1>
+    </mat-card-title>
+  </mat-card-header>
+  <form (submit)="saved.emit(currentPeople)">
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="name"
+          [(ngModel)]="currentPeople.name"
+          type="text"
+          name="name"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="email"
+          [(ngModel)]="currentPeople.email"
+          type="text"
+          name="email"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="whatsapp"
+          [(ngModel)]="currentPeople.whatsapp"
+          type="text"
+          name="whatsapp"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          placeholder="phone"
+          [(ngModel)]="currentPeople.phone"
+          type="text"
+          name="phone"
+        />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="submit" mat-button color="primary">Save</button>
+      <button type="button" mat-button (click)="cancelled.emit(currentPeople)">
+        Cancel
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>

@@ -1,0 +1,18 @@
+<div class="container">
+  <!-- PEOPLES LIST -->
+  <div class="col-50">
+    <app-people-list
+      [peoples]="peoples$ | async"
+      (selected)="selectPeople($event)"
+      (deleted)="deletePeople($event)"
+    ></app-people-list>
+  </div>
+  <!-- PEOPLE DETAILS -->
+  <div class="col-50">
+    <app-people-details
+      [people]="selectedPeople"
+      (saved)="savePeople($event)"
+      (cancelled)="cancel($event)"
+    ></app-people-details>
+  </div>
+</div>
